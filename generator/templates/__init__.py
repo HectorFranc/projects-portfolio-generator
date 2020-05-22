@@ -1,6 +1,8 @@
 from jinja2 import Template, Environment, PackageLoader, select_autoescape, FileSystemLoader
 from utils.common import get_config
 import os
+from css_html_js_minify import html_minify
+
 
 env = Environment(
     loader=FileSystemLoader(get_config()['templates_path']),
@@ -14,7 +16,9 @@ def generate_template(template_name, html_ext=True):
     return env.get_template(f'{template_name}{".html" if html_ext else ""}')
 
 def custom_render_template(template: Template, *args, **kwargs):
-    return template.render(*args, **kwargs)
+    rendered = template.render(*args, **kwargs)
+    minified = html_minify(rendered)
+    return minified
 
 def write_rendered_template_to_file(template: Template, filename: str, file_path = '', *args, **kwargs):
     file_dir = os.path.join(get_config()['content_path'], file_path, f'{filename}.html')

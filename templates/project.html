@@ -1,13 +1,35 @@
 {% extends 'base.html' %}
 
 
+{% block extra_css %}
+<link rel="stylesheet" href="{{MEDIA_PREFIX}}css/main.css">
+{% endblock extra_css %}
+
+
 {% block title %}
-    Project
+{{title}}
 {% endblock title %}
     
 
 
 {% block content %}
-    Project
+<header>
+    <div class="container">
+        <h1>Proyectos de Hector</h1>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <h2>Proyecto</h2>
+        <section>
+            <h2>{{title}}</h2>
+            <a href="https://{{url}}" target="_blank">Ver</a>
+            <p>{{description}}</p>
+            <img src="{{MEDIA_PREFIX}}{{image_url}}" alt="{{image_alt}}" width="800" height="450">
+        </section>
+    </div>
+</main>
+
 {% endblock content %}
     

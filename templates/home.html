@@ -23,9 +23,19 @@ Inicio
     <div class="container">
         <h2>Proyectos</h2>
         <section class="projects">
+            {% for project in projects_list %}
             <article class="project__item">
                 <figure class="project__image">
-                    <img loading="lazy" src="https://picsum.photos/400/225" alt="Proyecto ...">
+                    <img loading="lazy" width="600" height="338" src="{{MEDIA_PREFIX}}{{project.image_url}}" alt="{{project.image_alt}}">
+                </figure>
+                <h3 class="project__title">{{project.title}}</h3>
+                <p class="project__description">{{project.description}}</p>
+                <a href="proyecto/{{project.slug}}" class="project__link">Ver Proyecto</a>
+            </article>
+            {% endfor %}
+            <article class="project__item">
+                <figure class="project__image">
+                    <img loading="lazy" width="600" height="338" src="https://picsum.photos/400/225" alt="Proyecto ...">
                 </figure>
                 <h3 class="project__title">Un título del proyecto</h3>
                 <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, minus in, esse tempore, voluptatem earum ipsam libero beatae numquam illum animi illo itaque temporibus laudantium maxime rem ab quasi ducimus.</p>
@@ -33,7 +43,7 @@ Inicio
             </article>
             <article class="project__item">
                 <figure class="project__image">
-                    <img loading="lazy" src="https://picsum.photos/400/225" alt="Proyecto ...">
+                    <img loading="lazy" width="600" height="338" src="https://picsum.photos/400/225" alt="Proyecto ...">
                 </figure>
                 <h3 class="project__title">Un título del proyecto</h3>
                 <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, minus in, esse tempore, voluptatem earum ipsam libero beatae numquam illum animi illo itaque temporibus laudantium maxime rem ab quasi ducimus.</p>
@@ -41,7 +51,7 @@ Inicio
             </article>
             <article class="project__item">
                 <figure class="project__image">
-                    <img loading="lazy" src="https://picsum.photos/400/225" alt="Proyecto ...">
+                    <img loading="lazy" width="600" height="338" src="https://picsum.photos/400/225" alt="Proyecto ...">
                 </figure>
                 <h3 class="project__title">Un título del proyecto</h3>
                 <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, minus in, esse tempore, voluptatem earum ipsam libero beatae numquam illum animi illo itaque temporibus laudantium maxime rem ab quasi ducimus.</p>
@@ -49,7 +59,7 @@ Inicio
             </article>
             <article class="project__item">
                 <figure class="project__image">
-                    <img loading="lazy" src="https://picsum.photos/400/225" alt="Proyecto ...">
+                    <img loading="lazy" width="600" height="338" src="https://picsum.photos/400/225" alt="Proyecto ...">
                 </figure>
                 <h3 class="project__title">Un título del proyecto</h3>
                 <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, minus in, esse tempore, voluptatem earum ipsam libero beatae numquam illum animi illo itaque temporibus laudantium maxime rem ab quasi ducimus.</p>
@@ -57,7 +67,7 @@ Inicio
             </article>
             <article class="project__item">
                 <figure class="project__image">
-                    <img loading="lazy" src="https://picsum.photos/400/225" alt="Proyecto ...">
+                    <img loading="lazy" width="600" height="338" src="https://picsum.photos/400/225" alt="Proyecto ...">
                 </figure>
                 <h3 class="project__title">Un título del proyecto</h3>
                 <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, minus in, esse tempore, voluptatem earum ipsam libero beatae numquam illum animi illo itaque temporibus laudantium maxime rem ab quasi ducimus.</p>

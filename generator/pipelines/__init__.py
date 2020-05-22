@@ -23,7 +23,8 @@ def home_pipeline():
     home_template = generate_template('home')
     write_rendered_template_to_file(
         home_template, 
-        filename='index', 
+        filename='index',
+        projects_list=get_config()['projects'],
         **get_config()['home']
     )
 

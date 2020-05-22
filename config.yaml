@@ -1,16 +1,10 @@
 projects:
-  - name: Proyecto 1
-    slug: proyecto-1
-    url: https://platzi.com
-    description: This is some description.
-    image: Nan
-    imageAlt: Alternative
-  - name: Proyecto 2
-    slug: proyecto-1
-    url: https://platzi.com
-    description: This is some description.
-    image: Nan
-    imageAlt: Alternative
+  - title: Juego De La Vida
+    slug: game-of-life
+    url: proyectos.dehector.com/game-of-life
+    description: El "Juego de la vida" de John Horton Conway. Un juego para cero jugadores. Ahora en tu navegador
+    image_url: images/game-of-life.png
+    image_alt: Juego De La Vida
 
 home:
   title: Inicio
