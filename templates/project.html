@@ -9,6 +9,11 @@
 {% block title %}
 {{title}}
 {% endblock title %}
+
+
+{% block description %}
+    {{description}}
+{% endblock description %}
     
 
 
@@ -26,7 +31,8 @@
             <h2>{{title}}</h2>
             <a href="https://{{url}}" target="_blank">Ver</a>
             <p>{{description}}</p>
-            <img src="{{MEDIA_PREFIX}}{{image_url}}" alt="{{image_alt}}" width="800" height="450">
+            <img src="{{MEDIA_PREFIX}}images/{{image_url}}" alt="{{image_alt}}" width="800" height="450">
+            {% if github_repo %}<a href="https://github.com/HectorFranc/{{github_repo}}">Github</a>{% endif %}
         </section>
     </div>
 </main>

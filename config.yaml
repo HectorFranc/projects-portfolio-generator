@@ -3,15 +3,15 @@ projects:
     slug: game-of-life
     url: proyectos.dehector.com/game-of-life
     description: El "Juego de la vida" de John Horton Conway. Un juego para cero jugadores. Ahora en tu navegador
-    image_url: images/game-of-life.png
+    image_url: game-of-life.png
     image_alt: Juego De La Vida
+    github_repo: hectorfranc.github.io
 
 home:
   title: Inicio
 
 static_sites:
-  - title: "404 Page"
-    slug: "404"
+  - slug: "404"
     description: 404 Page
     filename_with_ext: 404.html
 

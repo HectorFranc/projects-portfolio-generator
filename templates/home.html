@@ -26,7 +26,7 @@ Inicio
             {% for project in projects_list %}
             <article class="project__item">
                 <figure class="project__image">
-                    <img loading="lazy" width="600" height="338" src="{{MEDIA_PREFIX}}{{project.image_url}}" alt="{{project.image_alt}}">
+                    <img loading="lazy" width="600" height="338" src="{{MEDIA_PREFIX}}images/{{project.image_url}}" alt="{{project.image_alt}}">
                 </figure>
                 <h3 class="project__title">{{project.title}}</h3>
                 <p class="project__description">{{project.description}}</p>
